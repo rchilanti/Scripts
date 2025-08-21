@@ -1,4 +1,4 @@
-# Importa o módulo do Active Directory, caso ainda não esteja carregado
+﻿# Importa o módulo do Active Directory, caso ainda não esteja carregado
 Import-Module ActiveDirectory
 
 # Define o caminho do arquivo CSV para salvar os resultados
