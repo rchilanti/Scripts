@@ -9,7 +9,7 @@ for i in ${fil};do
 
 sshpass -p root123 ssh -o StrictHostKeyChecking=no root@${i} '
 
-cat=`cat /etc/issue |grep -c openSUSE`
+cat=`cat /etc/os-release | grep -c "Oracle Linux Server 9"`
 
 if [ "$cat" = 1 ]; then
       echo "MaxAuthTries 3" >> /etc/ssh/sshd_config
