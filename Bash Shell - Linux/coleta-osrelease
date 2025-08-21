@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+fil="$(cat /root/renan/lojas.txt)"
+
+EST="micros_coletados.txt"
+
+for i in ${fil};do
+	ping -c 3 -n -q ${i} 1> /dev/null && {
+		HST=$(nmap -sP -n $(echo ${i}|cut -d'.' -f1,2,3).0/24 |egrep -i "^n"|awk '{print$NF}'|egrep -v "([Aa-Zz]|\.1$|\.[0-9]{3}$)")
+				for h in ${HST};do
+				{
+					ssh -o StrictHostKeyChecking=no root@${h} "[ -e /etc/os-release ]" && {
+						echo "${h}" >> ${EST}
+					}
+				}&
+				done
+
+		}
+done
