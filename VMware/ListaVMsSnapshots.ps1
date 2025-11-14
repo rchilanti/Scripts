@@ -10,18 +10,18 @@ $path = "C:\Temp\Scripts\VMware\ListaVMsSnapshots\Snapshots.xlsx"
 
 # Listar VMs com snapshots em cada vCenter
 Write-Host "Exportando lista do vc01..." -ForegroundColor Blue
-Get-VM -Server vcpro01 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc01" -AutoSize -BoldTopRow
+Get-VM -Server vc01 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc01" -AutoSize -BoldTopRow
 
 Write-Host "Exportando lista do vc02..." -ForegroundColor Blue
-Get-VM -Server vcpro02 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc02" -AutoSize -BoldTopRow
+Get-VM -Server vc02 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc02" -AutoSize -BoldTopRow
 
 Write-Host "Exportando lista do vc03..." -ForegroundColor Blue
-Get-VM -Server vcpro03 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc03" -AutoSize -BoldTopRow
+Get-VM -Server vc03 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc03" -AutoSize -BoldTopRow
 
 Write-Host "Exportando lista do vc04..." -ForegroundColor Blue
-Get-VM -Server vccas01 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc04" -AutoSize -BoldTopRow
+Get-VM -Server vc04 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc04" -AutoSize -BoldTopRow
 
 Write-Host "Exportando lista do vc05..." -ForegroundColor Blue
-Get-VM -Server vctrpro01 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc05" -AutoSize -BoldTopRow
+Get-VM -Server vc05 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc05" -AutoSize -BoldTopRow
 
 Write-Host "Lista de VMs com snapshot exportado com sucesso" -ForegroundColor Green
