@@ -1,2 +1,2 @@
 # Scripts
-Scripts em Bash Shell, Shell Script e Bat
+Scripts em Bash Shell, Shell Script, Bat e PowerShell
