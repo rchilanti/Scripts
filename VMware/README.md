@@ -8,15 +8,15 @@
 </p>
 <br>
 Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
-
+<br>
 Install-Module -Name VMware.PowerCLI
-
+<br>
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
-
+<br>
 Import-Module VMware.VimAutomation.Core
-
+<br>
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-
+<br>
 Set-PowerCLIConfiguration -Scope User -InvalidCertificateAction Prompt -Confirm:$false
 <br>
 <br>
