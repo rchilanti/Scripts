@@ -6,7 +6,8 @@ Connect-VIServer -Server "vc03" -User "Username" -Password "passwd" | Select-Obj
 Connect-VIServer -Server "vc04" -User "Username" -Password "passwd" | Select-Object Name
 Connect-VIServer -Server "vc05" -User "Username" -Password "passwd" | Select-Object Name
 
-$path = "C:\Temp\Scripts\VMware\ListaVMsSnapshots\Snapshots.xlsx"
+$data = Get-Date -Format "dd-MM-yyyy"
+$path = "C:\Temp\Scripts\VMware\ListaVMsSnapshots\Snapshots-$data.xlsx"
 
 # Listar VMs com snapshots em cada vCenter
 Write-Host "Exportando lista do vc01..." -ForegroundColor Blue
