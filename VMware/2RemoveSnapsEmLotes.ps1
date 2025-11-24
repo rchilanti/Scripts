@@ -61,3 +61,5 @@ while ($index -lt $VMs.Count) {
 Write-Host ""
 Write-Host "Processo concluido para todas as VMs da lista." -ForegroundColor Green
 Write-Host "=================================================="
+Disconnect-VIServer -Server hostnamedoesxiouvcenter -Confirm:$false
+Write-Host "Desconectado do vCenter" -ForegroundColor Yellow
