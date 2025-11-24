@@ -25,4 +25,13 @@ Get-VM -Server vc04 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_
 Write-Host "Exportando lista do vc05..." -ForegroundColor Blue
 Get-VM -Server vc05 | Get-Snapshot | Select-Object VM, Name, @{N="Created";E={$_.Created.ToString("dd/MM/yyyy")}} | Export-Excel -Path $path -WorksheetName "vc05" -AutoSize -BoldTopRow
 
-Write-Host "Lista de VMs com snapshot exportado com sucesso" -ForegroundColor Green
+Write-Host "Lista de VMs com snapshot exportado com sucesso em $path" -ForegroundColor Green
+Write-Host "=================================================="
+#Desconecta de todos os vCenters
+Disconnect-VIServer -Server "vc01" -Confirm:$false
+Disconnect-VIServer -Server "vc02" -Confirm:$false
+Disconnect-VIServer -Server "vc03" -Confirm:$false
+Disconnect-VIServer -Server "vc04" -Confirm:$false
+Disconnect-VIServer -Server "vc05" -Confirm:$false
+
+Write-Host "Desconectado de todos os vCenters" -ForegroundColor Yellow
