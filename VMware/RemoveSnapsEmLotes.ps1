@@ -1,3 +1,5 @@
+#Script que remove os snapshots das VMs em lotes
+
 # Conectar silenciosamente
 $null = Connect-VIServer -Server "hostnamedoesxiouvcenter" `
     -User "usuariodoesxiouvcenter" `
