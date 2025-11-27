@@ -19,6 +19,8 @@ Import-Module VMware.VimAutomation.Core
 <br>
 Set-PowerCLIConfiguration -Scope User -InvalidCertificateAction Prompt -Confirm:$false
 <br>
+Install-Module -Name ImportExcel -Scope CurrentUser
+<br>
 <br>
 <p align="center">
     <strong>Após realizar os passos acima, faça um teste de conexão no seu vCenter para validar que tudo ocorrerá bem.</strong>
