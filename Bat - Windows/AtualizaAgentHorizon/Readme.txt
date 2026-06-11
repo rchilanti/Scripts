@@ -6,6 +6,7 @@ Premissas para executar o script com efetividade:
 2-Coloque os arquivos Omnissa-Horizon-Agent-8.18.exe e Install.bat em alguma pasta da rede que o destino tenha permissão de acesso.
 
 3-Coloque os hostnames ou IPs dos VDI, no arquivo ListaAtualizaVDI.txt, um abaixo do outro, ex:
+
 VDI-001
 VDI-002
 VDI-003
